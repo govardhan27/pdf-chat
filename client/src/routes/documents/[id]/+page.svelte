@@ -23,11 +23,11 @@
 
 {#if document}
 	<div class="grid grid-cols-3 gap-2" style="height: calc(100vh - 80px);">
-		<div class="col-span-1">
-			<ChatPanel documentId={document.id} onSubmit={handleSubmit} />
-		</div>
 		<div class="col-span-2">
 			<PdfViewer url={documentUrl} />
+		</div>
+		<div class="col-span-1">
+			<ChatPanel documentId={document.id} onSubmit={handleSubmit} />
 		</div>
 	</div>
 {/if}

@@ -41,8 +41,8 @@
 >
 	<div class="rounded-lg border-b px-3 py-2 flex flex-row items-center justify-between">
 		<div class="opacity-40">
-			<input id="chat-type" type="checkbox" bind:checked={useStreaming} />
-			<label for="chat-type" class="italic">Streaming</label>
+			<!-- <input id="chat-type" type="checkbox" bind:checked={useStreaming} /> -->
+			<!-- <label for="chat-type" class="italic">Streaming</label> -->
 		</div>
 		<div class="flex gap-2">
 			<ConversationSelect conversations={$store.conversations} />

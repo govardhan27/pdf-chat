@@ -1,0 +1,34 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+boto3 = "*"
+botocore = "*"
+celery = "*"
+click = "*"
+flask = "*"
+flask-sqlalchemy = "*"
+flask-cors = "*"
+langchain = "*"
+openai = "*"
+python-dotenv = "*"
+werkzeug = "*"
+invoke = "*"
+pinecone-client = "*"
+pypdf = "*"
+watchdog = "*"
+tiktoken = "*"
+uuid = "*"
+langfuse = "*"
+backoff = "*"
+redis = "*"
+colorama = "*"
+langchain-community = "*"
+langchain-openai = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"

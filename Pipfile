@@ -27,6 +27,8 @@ redis = "*"
 colorama = "*"
 langchain-community = "*"
 langchain-openai = "*"
+langgraph = "*"
+duckduckgo-search = "*"
 
 [dev-packages]
 

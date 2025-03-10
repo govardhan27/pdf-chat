@@ -1,4 +1,3 @@
-import random
 from langchain_openai.chat_models import ChatOpenAI
 from app.chat.models import ChatArgs
 from app.chat.vector_stores import retriever_map
@@ -9,7 +8,7 @@ from app.web.api import (
     get_conversation_components,
     set_conversation_components
 )
-
+from app.chat.score import random_component_by_score
 
 def select_component(component_type, component_map, chat_args):
     """
@@ -35,7 +34,7 @@ def select_component(component_type, component_map, chat_args):
         builder = component_map[previous_component_class]
         return previous_component_class, builder(chat_args)
     else:
-        random_component_class = random.choice(list(component_map.keys()))
+        random_component_class = random_component_by_score(component_type, component_map)
         print(f"random_component_class: {random_component_class}")
         builder = component_map[random_component_class]
         return random_component_class, builder(chat_args)

@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import AuthGuard from '$c/AuthGuard.svelte';
+	import ChatbotAssistant from '$c/ChatbotAssistant.svelte'; // Add this import
+
 
 	export let data: PageData;
 
@@ -45,10 +47,10 @@
 						{#each documents as document}
 							<tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
 								<td
-									class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200"
+									class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 light:text-gray-200"
 									>{document.name}</td
 								>
-								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-gray-200"
+								<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 light:text-gray-200"
 									>{document.id}</td
 								>
 								<td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
@@ -63,4 +65,5 @@
 			</div>
 		</div>
 	</div>
+	<ChatbotAssistant />
 </div>

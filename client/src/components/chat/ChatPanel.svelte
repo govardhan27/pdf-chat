@@ -15,7 +15,8 @@
 	export let onSubmit: (text: string, useStreaming: boolean) => void;
 	export let documentId: number;
 
-	let useStreaming = !!localStorage.getItem('streaming');
+	// let useStreaming = !!localStorage.getItem('streaming');
+	let useStreaming = localStorage.getItem('streaming') !== 'false';
 
 	$: localStorage.setItem('streaming', useStreaming ? 'true' : '');
 	$: activeConversation = $store.activeConversationId ? getActiveConversation() : null;

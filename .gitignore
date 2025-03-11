@@ -7,4 +7,5 @@ dump.rdb
 test.py
 start.sh
 cmd.txt
+restart_services.sh
 
